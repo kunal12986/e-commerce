@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TORTOISE Showcase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #e50914;
+      margin: 0;
+      transition: transform 0.4s ease, color 0.4s ease;
+    }
+
+    header h1:hover {
+      transform: scale(1.05);
+      color: #ff5733;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #292929;
+      padding: 1rem 0;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #e50914;
+    }
+
+    .hero {
+      background: url('robin-le-mee-yvKr1_36NQo-unsplash.jpg') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      color: white;
+      text-shadow: 0 0 20px #e50914, 0 0 40px #e50914;
+      background: rgba(0,0,0,0.4);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    
+    
+
+    
+    
+
+    .slider {
+      position: relative;
+      width: 100vw;
+      height: 600px;
+      overflow: hidden;
+      margin: 3rem 0;
+    }
+
+    .slides {
+      display: flex;
+      width: calc(100vw * 7);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      position: relative;
+      width: 100vw;
+      height: 600px;
+      flex-shrink: 0;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .slider-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 1rem;
+    }
+
+    .slider-controls button {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      padding: 1rem;
+      cursor: pointer;
+      font-size: 1.5rem;
+      transition: background 0.3s ease;
+    }
+
+    .slider-controls button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #1f1f1f;
+      font-size: 0.9rem;
+    }
+  
+
+    /* Animation for section headings and paragraphs */
+    .section h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #e50914;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    
+    
+
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #ccc;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    
+    
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }</style>
+</head>
+
+<body>
+  <header>
+    <h1>TORTOISE</h1>
+  </header>
+
+  <nav>
+    <a href="#intro">Intro</a>
+    <a href="#models">Models</a>
+    <a href="#history">History</a>
+    <span style="margin-left: auto; margin-right: 1rem;">
+      <a href="https://instagram.com/yourprofile" target="_blank" style="color: #e50914; margin: 0 10px; text-decoration: none;">Instagram</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: #e50914; margin: 0 10px; text-decoration: none;">LinkedIn</a>
+    </span>
+  </nav>
+
+  <section class="hero">
+    <h2>Unleash the Legend</h2>
+  </section>
+
+  <section id="intro" class="section">
+    <h3>Who designed the Porsche logo?</h3>
+    <p>Although lettering with the name ‘Porsche’ first started featuring on the bonnets of sportscars made in Zuffenhausen in 1950, it would be three more years before the idea to create a genuine trademark began to take hold. It started when Porsche and Ottomar Domnick, a Stuttgart doctor and original Porsche customer, organised a design competition among German art academies in 1951. Although the prize pot was set at 1,000 Deutsche Mark, none of the submitted designs managed to win them over. Instead, another idea piqued the interest of Ferry Porsche… and it would come from New York City, the place where modern marketing, advertising and brand awareness was born.</p>
+    <p>It was here that Max Hoffman – an Austrian-born US car importer who specialised in European sportscars – played a crucial role in the idea to create a Porsche logo. After winning an award for the most interesting car at the Watkins Glen Concours d’Élégance for the first Porsche 356, which Hoffman imported to the US, he saw the potential to create a quality seal that would visually appeal to customers and create a unique identity. At a business dinner with Ferry Porsche in New York in 1951, Hoffman urged him to develop a symbol that reflected the company’s roots and conveyed the quality and dynamism of his products. His pitch patently struck a chord.</p>
+    <p>Although lettering with the name ‘Porsche’ first started featuring on the bonnets of sportscars made in Zuffenhausen in 1950, it would be three more years before the idea to create a genuine trademark began to take hold. It started when Porsche and Ottomar Domnick, a Stuttgart doctor and original Porsche customer, organised a design competition among German art academies in 1951. Although the prize pot was set at 1,000 Deutsche Mark, none of the submitted designs managed to win them over. Instead, another idea piqued the interest of Ferry Porsche… and it would come from New York City, the place where modern marketing, advertising and brand awareness was born.</p>
+    <p>It was here that Max Hoffman – an Austrian-born US car importer who specialised in European sportscars – played a crucial role in the idea to create a Porsche logo. After winning an award for the most interesting car at the Watkins Glen Concours d’Élégance for the first Porsche 356, which Hoffman imported to the US, he saw the potential to create a quality seal that would visually appeal to customers and create a unique identity. At a business dinner with Ferry Porsche in New York in 1951, Hoffman urged him to develop a symbol that reflected the company’s roots and conveyed the quality and dynamism of his products. His pitch patently struck a chord.</p>
+  </section>
+
+  <div class="slider">
+    <div class="slides" id="slides">
+      <div class="slide">
+        <img src="911-Porsche-Free-PNG.png" alt="Porsche 911">
+        <div class="caption">Porsche 911</div>
+      </div>
+      <div class="slide">
+        <img src="igor-costa-2Bjo1lzZlHc-unsplash.jpg" alt="Porsche Taycan">
+        <div class="caption">Porsche Taycan</div>
+      </div>
+      <div class="slide">
+        <img src="redcharlie-vQVWIsIBafA-unsplash.jpg" alt="Porsche Taycan">
+        <div class="caption">Porsche Taycan</div>
+      </div>
+      <div class="slide">
+        <img src="robin-le-mee-yvKr1_36NQo-unsplash.jpg" alt="Porsche Taycan">
+        <div class="caption">Porsche Taycan</div>
+      </div>
+      <div class="slide">
+        <img src="911-Porsche-PNG-Clipart-Background.png" alt="Porsche Cayman">
+        <div class="caption">Porsche Cayman</div>
+      </div>
+      <div class="slide">
+        <img src="pngwing.com.png" alt="Silver Porsche">
+        <div class="caption">Silver Porsche</div>
+      </div>
+      <div class="slide">
+        <img src="pngwing.com (1).png" alt="Porsche Front View">
+        <div class="caption">Porsche Front View</div>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button onclick="prevSlide()">&#10094;</button>
+      <button onclick="nextSlide()">&#10095;</button>
+    </div>
+  </div>
+
+  <section id="models" class="section">
+    <h3>Our Iconic Models</h3>
+    <p>While the name ‘Porsche’ first appeared on car bonnets in Zuffenhausen in 1950, it wasn’t until 1953 that the idea of a true trademark began to take hold. In 1951, Ferry Porsche and Stuttgart doctor Ottomar Domnick launched a design competition among German art academies with a 1,000 Deutsche Mark prize—but none of the entries impressed.</p>
+    <p>Instead, inspiration came from New York City. Max Hoffman, an Austrian-born importer of European sports cars, had just earned an award for the Porsche 356 at the Watkins Glen Concours d’Élégance. Recognizing the need for a strong brand identity, he suggested creating a logo that reflected Porsche’s heritage and quality. At a 1951 dinner with Ferry Porsche, Hoffman’s vision struck a chord—leading to the birth of the iconic Porsche crest.</p>
+  </section>
+
+
+  <div class="section">
+    <img src="911-Porsche-Free-PNG.png" alt="Porsche Showcase" style="width:100%; height:auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+  </div>
+
+  
+
+  <section class="section" style="font-family: 'Courier New', monospace;">
+    <h3 style="color: #ffcc00;">Performance Highlights</h3>
+    <p>Engine: 3.0L Twin-Turbocharged Flat-6</p>
+    <p>Top Speed: 293 km/h (182 mph)</p>
+    <p>Horsepower: 443 hp</p>
+    <p>Torque: 530 Nm (391 lb-ft)</p>
+    <p>0–100 km/h: Just 3.5 seconds</p>
+  </section>
+
+  <div class="section">
+    <img src="911-Porsche-PNG-Clipart-Background.png" alt="Porsche Showcase" style="width:100%; height:auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+  </div>
+
+  <section id="history" class="section">
+    <h3>Legacy of Speed</h3>
+    <p>Founded in 1931, Porsche has redefined automotive excellence with a legacy built on performance, innovation, and passion.</p>
+  </section>
+
+  
+    <footer>
+    <div style="margin-top: 1rem;">
+      <a href="https://www.instagram.com/kunal.xd07/" target="_blank" style="color: #e50914; margin: 0 10px; text-decoration: none;">Instagram</a>
+      |
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: #e50914; margin: 0 10px; text-decoration: none;">LinkedIn</a>
+    </div>
+    <div style="margin-top: 0.5rem; font-size: 0.8rem; color: #aaa;">
+      Contact: kunal4403e@email.com
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      if (index < 0) {
+        currentIndex = totalSlides - 1;
+      } else if (index >= totalSlides) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+      const offset = -currentIndex * 100;
+      slides.style.transform = `translateX(${offset}vw)`;
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    setInterval(() => {
+      nextSlide();
+    }, 6000);
+      // Fade in on hover and stay visible
+    document.querySelectorAll('.section h3, .section p').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        if (!el.classList.contains('visible')) {
+          el.classList.add('visible');
+          el.style.opacity = '1';
+          el.style.animation = 'fadeInUp 0.6s ease forwards';
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
